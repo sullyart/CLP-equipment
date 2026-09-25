@@ -11,6 +11,7 @@ import {
   Award,
   MapPin,
   Phone,
+  History,
 } from "lucide-react";
 
 const stats = [
@@ -264,7 +265,7 @@ export default function AboutPage() {
       </section>
 
       {/* =========================================================
-          CEO / LEADERSHIP FEATURE
+          LEADERSHIP / FOUNDING FAMILY
       ========================================================== */}
       <section className="relative overflow-hidden bg-[#111111] py-16 sm:py-20 lg:py-28">
         {/* Decorative yellow block */}
@@ -275,25 +276,160 @@ export default function AboutPage() {
 
         <div className="relative mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
           {/* Section heading */}
-          <div className="mb-10 max-w-2xl lg:mb-14">
+          <div className="mb-10 max-w-3xl lg:mb-14">
             <p className="mb-3 text-[10px] font-700 uppercase tracking-[0.22em] text-[#F5C400]">
-              Leadership
+              Our Leadership
             </p>
 
             <h2 className="text-[32px] font-800 leading-[1.05] tracking-tight text-white sm:text-[44px]">
-              Led by experience.
+              Built on family.
               <br />
-              Driven by purpose.
+              Driven by experience.
             </h2>
+
+            <p className="mt-5 max-w-2xl text-[14px] leading-7 text-white/50 sm:text-[15px]">
+              CLP Equipment carries forward a family-founded tradition of hard
+              work, dependable service and a commitment to helping customers get
+              the job done.
+            </p>
           </div>
 
-          {/* CEO card */}
+          {/* =====================================================
+              FOUNDER
+          ====================================================== */}
+          <div className="mb-6 grid overflow-hidden bg-[#181818] lg:grid-cols-[0.9fr_1.1fr]">
+            {/* Founder Image / Legacy Panel */}
+            <div className="relative min-h-[360px] bg-[#202020] sm:min-h-[450px] lg:min-h-[520px]">
+              {/* Replace this with the founder's actual image when available */}
+              <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-[#202020] via-[#171717] to-[#111111]">
+                <div className="text-center px-8">
+                  <div className="mx-auto flex h-20 w-20 items-center justify-center border border-[#F5C400]/30 bg-[#F5C400]/10 text-[#F5C400]">
+                    <History size={32} strokeWidth={1.5} />
+                  </div>
+
+                  <p className="mt-6 text-[10px] font-700 uppercase tracking-[0.22em] text-[#F5C400]">
+                    The Beginning
+                  </p>
+
+                  <p className="mt-2 text-[13px] leading-6 text-white/40">
+                    The foundation of the Pavlik family business.
+                  </p>
+                </div>
+              </div>
+
+              {/* Bottom label */}
+              <div className="absolute bottom-0 left-0 p-6 sm:p-8">
+                <p className="text-[10px] font-700 uppercase tracking-[0.2em] text-[#F5C400]">
+                  Company Founder
+                </p>
+
+                <p className="mt-1 text-[13px] font-600 text-white/70">
+                  The foundation behind the company.
+                </p>
+              </div>
+            </div>
+
+            {/* Founder Content */}
+            <div className="flex flex-col justify-center p-7 sm:p-10 lg:p-14 xl:p-16">
+              <div className="mb-8 flex items-center gap-3">
+                <div className="flex h-11 w-11 items-center justify-center bg-[#F5C400] text-[#111111]">
+                  <Award size={19} strokeWidth={2} />
+                </div>
+
+                <div>
+                  <p className="text-[9px] font-700 uppercase tracking-[0.18em] text-white/40">
+                    Company History
+                  </p>
+
+                  <p className="mt-1 text-[11px] font-700 uppercase tracking-[0.1em] text-[#F5C400]">
+                    Founder
+                  </p>
+                </div>
+              </div>
+
+              <h3 className="text-[36px] font-800 leading-none tracking-tight text-white sm:text-[48px]">
+                Mr. Pavlik
+              </h3>
+
+              <p className="mt-2 text-[13px] font-600 uppercase tracking-[0.14em] text-white/40">
+                Founder &amp; Family Legacy
+              </p>
+
+              <div className="my-8 h-px w-full bg-white/10" />
+
+              <p className="text-[18px] font-600 leading-[1.55] text-white/90 sm:text-[21px]">
+                “The company was built on hard work, dependable equipment and
+                doing right by the people we serve.”
+              </p>
+
+              <p className="mt-6 max-w-xl text-[13.5px] leading-7 text-white/50">
+                The Pavlik family legacy is at the heart of CLP Equipment.
+                Founded with a focus on dependable equipment and strong customer
+                relationships, that foundation continues to shape the way the
+                company serves its customers today.
+              </p>
+
+              {/* Founder details */}
+              <div className="mt-9 grid gap-4 sm:grid-cols-2">
+                <div className="flex items-center gap-3 border border-white/10 bg-black/10 px-4 py-3.5">
+                  <History size={16} className="shrink-0 text-[#F5C400]" />
+
+                  <div>
+                    <p className="text-[8px] font-700 uppercase tracking-[0.15em] text-white/35">
+                      Legacy
+                    </p>
+
+                    <p className="mt-0.5 text-[11px] font-600 text-white/80">
+                      Family Founded
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-3 border border-white/10 bg-black/10 px-4 py-3.5">
+                  <Award size={16} className="shrink-0 text-[#F5C400]" />
+
+                  <div>
+                    <p className="text-[8px] font-700 uppercase tracking-[0.15em] text-white/35">
+                      Continued By
+                    </p>
+
+                    <p className="mt-0.5 text-[11px] font-600 text-white/80">
+                      The Next Generation
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* =====================================================
+              FAMILY CONNECTION
+          ====================================================== */}
+          <div className="mb-6 flex flex-col items-center justify-center gap-3 py-4 sm:flex-row sm:gap-5">
+            <div className="h-px w-12 bg-white/10 sm:w-20" />
+
+            <div className="flex items-center gap-2 text-center">
+              <span className="h-1.5 w-1.5 bg-[#F5C400]" />
+
+              <span className="text-[9px] font-700 uppercase tracking-[0.2em] text-white/35">
+                A Family Business Built Across Generations
+              </span>
+
+              <span className="h-1.5 w-1.5 bg-[#F5C400]" />
+            </div>
+
+            <div className="h-px w-12 bg-white/10 sm:w-20" />
+          </div>
+
+          {/* =====================================================
+              CEO
+          ====================================================== */}
           <div className="grid overflow-hidden bg-[#181818] lg:grid-cols-[0.9fr_1.1fr]">
             {/* CEO Image */}
             <div className="relative min-h-[430px] sm:min-h-[520px] lg:min-h-[600px]">
               <img
                 src="/images/carol.jpeg"
-                alt="Portrait of the company's Chief Executive Officer"
+                alt="Portrait of Carole L Pavlik, Chief Executive Officer"
                 className="absolute inset-0 h-full w-full object-cover object-center"
                 loading="lazy"
               />
@@ -304,11 +440,11 @@ export default function AboutPage() {
               {/* Image label */}
               <div className="absolute bottom-0 left-0 p-6 sm:p-8">
                 <p className="text-[10px] font-700 uppercase tracking-[0.2em] text-[#F5C400]">
-                  Our Leadership
+                  Next Generation
                 </p>
 
                 <p className="mt-1 text-[13px] font-600 text-white/70">
-                  Building a company people can rely on.
+                  Continuing the Pavlik family legacy.
                 </p>
               </div>
             </div>
@@ -347,10 +483,9 @@ export default function AboutPage() {
               </p>
 
               <p className="mt-6 max-w-xl text-[13.5px] leading-7 text-white/50">
-                With a focus on dependable equipment, strong customer
-                relationships and long-term service, our leadership team is
-                committed to building a company that customers can count on from
-                the first conversation to every project that follows.
+                As the next generation of the Pavlik family business, Carole L
+                Pavlik continues the company&apos;s commitment to dependable
+                equipment, strong customer relationships and long-term service.
               </p>
 
               {/* CEO details */}
