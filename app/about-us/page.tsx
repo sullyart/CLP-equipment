@@ -299,32 +299,29 @@ export default function AboutPage() {
           ====================================================== */}
           <div className="mb-6 grid overflow-hidden bg-[#181818] lg:grid-cols-[0.9fr_1.1fr]">
             {/* Founder Image / Legacy Panel */}
-            <div className="relative min-h-[360px] bg-[#202020] sm:min-h-[450px] lg:min-h-[520px]">
-              {/* Replace this with the founder's actual image when available */}
-              <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-[#202020] via-[#171717] to-[#111111]">
-                <div className="text-center px-8">
-                  <div className="mx-auto flex h-20 w-20 items-center justify-center border border-[#F5C400]/30 bg-[#F5C400]/10 text-[#F5C400]">
-                    <History size={32} strokeWidth={1.5} />
-                  </div>
+            {/* Founder Image */}
+            <div className="relative min-h-[360px] sm:min-h-[450px] lg:min-h-[520px]">
+              <img
+                src="https://images.pexels.com/photos/29598497/pexels-photo-29598497.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                alt="Mature business executive representing the company's founding legacy"
+                className="absolute inset-0 h-full w-full object-cover object-center"
+                loading="lazy"
+              />
 
-                  <p className="mt-6 text-[10px] font-700 uppercase tracking-[0.22em] text-[#F5C400]">
-                    The Beginning
-                  </p>
+              {/* Dark overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-black/10" />
 
-                  <p className="mt-2 text-[13px] leading-6 text-white/40">
-                    The foundation of the Pavlik family business.
-                  </p>
-                </div>
-              </div>
+              {/* Yellow accent */}
+              <div className="absolute left-0 top-0 h-1 w-24 bg-[#F5C400]" />
 
-              {/* Bottom label */}
+              {/* Founder label */}
               <div className="absolute bottom-0 left-0 p-6 sm:p-8">
                 <p className="text-[10px] font-700 uppercase tracking-[0.2em] text-[#F5C400]">
                   Company Founder
                 </p>
 
-                <p className="mt-1 text-[13px] font-600 text-white/70">
-                  The foundation behind the company.
+                <p className="mt-1 text-[13px] font-600 text-white/75">
+                  The foundation of the Pavlik family business.
                 </p>
               </div>
             </div>
