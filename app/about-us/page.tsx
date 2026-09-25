@@ -345,7 +345,7 @@ export default function AboutPage() {
               </div>
 
               <h3 className="text-[36px] font-800 leading-none tracking-tight text-white sm:text-[48px]">
-                Mr. Pavlik
+                Mr. John Pavlik
               </h3>
 
               <p className="mt-2 text-[13px] font-600 uppercase tracking-[0.14em] text-white/40">
