@@ -2,13 +2,13 @@
 
 interface CompanyDetails {
   company: string;
-  phone: string;
+  email: string;
   address: string;
 }
 
 const company: CompanyDetails = {
   company: "CLP Equipment Limited",
-  phone: "(423) 251-6978",
+  email: "CLP.equipment.ltd@linuxmail.org",
   address: "102 Village Trce, Kingston, TN 37763",
 };
 
@@ -29,19 +29,25 @@ function MapPin() {
   );
 }
 
-function PhoneIcon() {
+function MailIcon() {
   return (
     <svg
-      width="16"
-      height="16"
-      viewBox="0 0 14 14"
+      width="18"
+      height="18"
+      viewBox="0 0 24 24"
       fill="none"
       aria-hidden="true"
     >
       <path
-        d="M2 1h3l1.5 3.5L5 6s1 2 3 3l1.5-1.5L13 9v3a1 1 0 0 1-1 1C5 13 1 9 1 3a1 1 0 0 1 1-2z"
+        d="M4 5h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2z"
         stroke="currentColor"
-        strokeWidth="1.2"
+        strokeWidth="1.8"
+      />
+      <path
+        d="m3 7 9 6 9-6"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinecap="round"
         strokeLinejoin="round"
       />
     </svg>
@@ -68,7 +74,7 @@ function ArrowRight() {
 }
 
 export default function Locations() {
-  const phoneHref = `tel:${company.phone.replace(/\D/g, "")}`;
+  const emailHref = `mailto:${company.email}`;
 
   const mapsHref = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
     company.address,
@@ -152,26 +158,26 @@ export default function Locations() {
             </div>
 
             <div className="grid gap-4 sm:grid-cols-2">
-              {/* Phone */}
-              <div className="border border-gray-100 bg-[#F8F8F8] p-5 transition-all duration-200 hover:border-[#F5C400]">
+              {/* Email */}
+              <div className="min-w-0 border border-gray-100 bg-[#F8F8F8] p-5 transition-all duration-200 hover:border-[#F5C400]">
                 <div className="mb-4 flex h-9 w-9 items-center justify-center bg-[#F5C400] text-[#111111]">
-                  <PhoneIcon />
+                  <MailIcon />
                 </div>
 
                 <p className="mb-1 text-[10px] font-700 uppercase tracking-[0.16em] text-[#999999]">
-                  Phone
+                  Email
                 </p>
 
                 <a
-                  href={phoneHref}
-                  className="text-[16px] font-700 text-[#111111] transition-colors hover:text-[#F5C400] focus:outline-none focus-visible:underline"
+                  href={emailHref}
+                  className="block break-words text-[14px] font-700 text-[#111111] transition-colors hover:text-[#F5C400] focus:outline-none focus-visible:underline sm:text-[15px]"
                 >
-                  {company.phone}
+                  {company.email}
                 </a>
               </div>
 
               {/* Address */}
-              <div className="border border-gray-100 bg-[#F8F8F8] p-5 transition-all duration-200 hover:border-[#F5C400]">
+              <div className="min-w-0 border border-gray-100 bg-[#F8F8F8] p-5 transition-all duration-200 hover:border-[#F5C400]">
                 <div className="mb-4 flex h-9 w-9 items-center justify-center bg-[#F5C400] text-[#111111]">
                   <MapPin />
                 </div>
@@ -208,10 +214,11 @@ export default function Locations() {
           </p>
 
           <a
-            href={phoneHref}
+            href={emailHref}
             className="inline-flex items-center gap-2 text-[11px] font-700 uppercase tracking-[0.08em] text-[#111111] transition-colors hover:text-[#F5C400]"
           >
-            Call {company.phone}
+            <MailIcon />
+            Email Us
             <ArrowRight />
           </a>
         </div>
